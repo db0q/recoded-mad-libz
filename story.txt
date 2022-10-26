@@ -1,3 +1,4 @@
-Louis[n] went[v] to the store[n], and it was fun[a]. He taught[v] the class[n].
-The abbreviation[n] "n" means[v] noun. We use[v] the letter[n] "v" for verbs.
-And for "a", you can[v] make a good[a] guess.
+
+A high school student[n] named Light[n] Turner[n] discovers[v] a mysterious notebook[n] 
+that has the power to kill[a] anyone whose name is written[nv within its pages,
+ and launches a secret crusade[a] to rid the world of criminals.
