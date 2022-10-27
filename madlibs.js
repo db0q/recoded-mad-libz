@@ -1,13 +1,18 @@
 
 
- const OUR_REGEX = /(?<word>\w+)(?<pos>\[[nva]\])?(?<punctuation>[\.,])?/;
+ const myRegex = /(?<word>\w+)(?<pos>\[[nva]\])?(?<punctuation>[\.,])?/; // w is Matches any 
+ //alphanumeric character from the basic Latin alphabet, including the underscore
+ //nva for n and v and a keys in POS object
+ //to help us change it to input with place holder equal the value of thus keys on POS object 
+ //punctuation those expre
  const POS = {
    n: "noun",
    v: "verb",
    a: "adj",
  };
  function posFinder(pos) {
-   const fixedPOS = pos.replace("[", "").replace("]", "");
+   const fixedPOS = pos.replace("[", "").replace("]", "");//replace [] iside myRegex with n v a words
+   // so it will appear inide input fields without []
    return POS[fixedPOS];
  }
  
@@ -15,8 +20,9 @@
    const arrStory = rawStory.split(" ");
  
    const fixedArray = [];
-   for (let el of arrStory) {
-     const group = OUR_REGEX.exec(el).groups;
+   for (let element of arrStory) {
+     const group = myRegex.exec(element).groups;// exec() method executes a search for a match 
+     //in a specified string and returns a result array, or null.
  
      if (group.pos != undefined && group.punc == undefined) {
        fixedArray.push({
@@ -80,12 +86,12 @@
          });
  
          inputEdit.addEventListener("keydown", (event) => {
-           if (event.keyCode === 13) {
+           if (event.keyCode === 13) { //13 equal enter button in the keyboard
              let input = inputEdit.nextElementSibling;
  
              if (input != null) {
                if (inputEdit.nodeName == "inputs") {
-                 input.focus();
+                 input.focus();//The focus() method gives focus to an element (if it can be focused).
                }
              } else {
                const h2 =document.createElement('h2')
