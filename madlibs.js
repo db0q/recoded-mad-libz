@@ -1,10 +1,9 @@
 
 
- const myRegex = /(?<word>\w+)(?<pos>\[[nva]\])?(?<punctuation>[\.,])?/; // w is Matches any 
- //alphanumeric character from the basic Latin alphabet, including the underscore
+ const myRegex = /(?<word>\w+)(?<pos>\[[nva]\])?/ // w+ indicates any character *from the
+ // latin alphabet*, multiple times 
  //nva for n and v and a keys in POS object
  //to help us change it to input with place holder equal the value of thus keys on POS object 
- //punctuation those expre
  const POS = {
    n: "noun",
    v: "verb",
